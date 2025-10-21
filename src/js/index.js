@@ -159,10 +159,10 @@ _btnSubmit.addEventListener("click", () => {
             <!-- bmi -->
             <div class="flex items-center justify-between px-5">
               <div
-                class="w-[50%] border h-[10px] rounded-2xl relative overflow-hidden"
+                class="w-[50%] h-[10px] bg-[#1d1c1d] rounded-2xl relative overflow-hidden"
               >
                 <div
-                  class="absolute top-0 left-0 bg-amber-700  h-full"
+                  class="absolute top-0 left-0 bg-[#e67616]  h-full"
                   style="width: ${_bmi * 2}%"
                 ></div>
               </div>
@@ -177,10 +177,10 @@ _btnSubmit.addEventListener("click", () => {
               <div class="flex items-center justify-between gap-2 mt-3">
                 <span class="w-[50%] text-[12px]">3 امتیازی</span>
                 <div
-                  class="w-[50%] border h-[10px] rounded-2xl relative overflow-hidden"
+                  class="w-[50%] bg-[#1d1c1d] h-[10px] rounded-2xl relative overflow-hidden"
                 >
-                  <div
-                    class="absolute top-0 left-0 bg-amber-700 w-[50%] h-full"
+                  <div style="width: ${_3shotVal}%"
+                    class="absolute top-0 left-0 bg-[#e67616]  h-full"
                   ></div>
                 </div>
               </div>
@@ -188,10 +188,10 @@ _btnSubmit.addEventListener("click", () => {
               <div class="flex items-center justify-between gap-2 mt-3">
                 <span class="w-[50%] text-[12px]">دریبل</span>
                 <div
-                  class="w-[50%] border h-[10px] rounded-2xl relative overflow-hidden"
+                  class="w-[50%] border bg-[#1d1c1d] h-[10px] rounded-2xl relative overflow-hidden"
                 >
-                  <div
-                    class="absolute top-0 left-0 bg-amber-700 w-[50%] h-full"
+                  <div style="width: ${_dribleVal}%"
+                    class="absolute top-0 left-0 bg-[#e67616] w-[50%] h-full"
                   ></div>
                 </div>
               </div>
@@ -199,10 +199,21 @@ _btnSubmit.addEventListener("click", () => {
               <div class="flex items-center justify-between gap-2 mt-3">
                 <span class="w-[50%] text-[12px]">لی آپ</span>
                 <div
-                  class="w-[50%] border h-[10px] rounded-2xl relative overflow-hidden"
+                  class="w-[50%] bg-[#1d1c1d] border h-[10px] rounded-2xl relative overflow-hidden"
                 >
-                  <div
-                    class="absolute top-0 left-0 bg-amber-700 w-[50%] h-full"
+                  <div style="width: ${_layupVal}%"
+                    class="absolute top-0 left-0 bg-[#e67616] w-[50%] h-full"
+                  ></div>
+                </div>
+              </div>
+              <!-- free throw -->
+              <div class="flex items-center justify-between gap-2 mt-3">
+                <span class="w-[50%] text-[12px]">پنالتی</span>
+                <div
+                  class="w-[50%] border bg-[#1d1c1d] h-[10px] rounded-2xl relative overflow-hidden"
+                >
+                  <div style="width: ${_freethrowVal}%"
+                    class="absolute top-0 left-0 bg-[#e67616] w-[50%] h-full"
                   ></div>
                 </div>
               </div>
@@ -210,10 +221,10 @@ _btnSubmit.addEventListener("click", () => {
               <div class="flex items-center justify-between gap-2 mt-3">
                 <span class="w-[50%] text-[12px]">ذفاع</span>
                 <div
-                  class="w-[50%] border h-[10px] rounded-2xl relative overflow-hidden"
+                  class="w-[50%] border bg-[#1d1c1d] h-[10px] rounded-2xl relative overflow-hidden"
                 >
-                  <div
-                    class="absolute top-0 left-0 bg-amber-700 w-[50%] h-full"
+                  <div style="width: ${_defenseVal}%"
+                    class="absolute top-0 left-0 bg-[#e67616] w-[50%] h-full"
                   ></div>
                 </div>
               </div>
@@ -249,5 +260,4 @@ _btnSubmit.addEventListener("click", () => {
     _freethrowInp.value = "";
     _defenseInp.value = "";
   }
-
 });
