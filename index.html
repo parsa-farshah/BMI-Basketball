@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bmi</title>
+    <link rel="stylesheet" href="src/styles/output.css" />
+  </head>
+  <body class="bg-black text-white">
+    <main class="w-full">
+      <div>
+        <!----------------------- title ------------------------>
+        <section class="flex justify-center items-center mt-7 gap-4">
+          <h4 class="jalayerMd text-3xl sm:text-4xl">
+            تحلیلگر BMI و پست بسکتبال
+          </h4>
+          <img
+            class="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px]"
+            src="src/icons/basketballIcon.png"
+            alt="icon basketball"
+          />
+        </section>
+        <!-- inputs -->
+        <div class="w-full h-[300px]">
+          <!-- form -->
+          <div class="flex w-full" id="form">
+            <!----------------------- second row -------------------------->
+            <div class="w-[50%] h-full px-8 ">
+              <!-- 3point player -->
+              <div class="flex gap-10 justify-center items-center w-full mt-6">
+                <label
+                  class="jalayerMd text-2xl text-[#ffcd79] w-[40%]"
+                  for="shot"
+                  >درصد شوت سه امتیازی</label
+                >
+                <input placeholder="100"
+                  id="shot"
+                  class="placeholder:text-[#ffffff41] px-2 w-[10%] bg-[#101111] border border-[#201f20] py-1 rounded-md"
+                  type="text"
+                />
+              </div>
+
+              <!-- driblling player -->
+              <div class="flex gap-10 justify-center items-center w-full mt-6">
+                <label
+                  class="jalayerMd text-2xl text-[#ffcd79] w-[40%]"
+                  for="drible"
+                  >درصد دریبل
+                </label>
+                <input placeholder="50"
+                  id="drible"
+                  class="placeholder:text-[#ffffff41] px-2 w-[10%] bg-[#101111] border border-[#201f20] py-1 rounded-md"
+                  type="text"
+                />
+              </div>
+
+              <!-- layup -->
+              <div class="flex gap-10 justify-center items-center w-full mt-6">
+                <label
+                  class="jalayerMd text-2xl text-[#ffcd79] w-[40%]"
+                  for="layup"
+                  >درصد لی آپ
+                </label>
+                <input placeholder="20"
+                  id="layup"
+                  class="placeholder:text-[#ffffff41] px-2 w-[10%] bg-[#101111] border border-[#201f20] py-1 rounded-md"
+                  type="text"
+                />
+              </div>
+
+              <!-- freethrow -->
+              <div class="flex gap-10 justify-center items-center w-full mt-6">
+                <label
+                  class="jalayerMd text-2xl text-[#ffcd79] w-[40%]"
+                  for="freethrow"
+                  >درصد پنالتی
+                </label>
+                <input placeholder="10"
+                  id="freethrow"
+                  class="placeholder:text-[#ffffff41] px-2 w-[10%] bg-[#101111] border border-[#201f20] py-1 rounded-md"
+                  type="text"
+                />
+              </div>
+
+              <!-- defense -->
+              <div class="flex gap-10 justify-center items-center w-full mt-6">
+                <label
+                  class="jalayerMd text-2xl text-[#ffcd79] w-[40%]"
+                  for="defense"
+                  >درصد دفاع
+                </label>
+                <input placeholder="90"
+                  id="defense"
+                  class="placeholder:text-[#ffffff41] px-2 w-[10%] bg-[#101111] border border-[#201f20] py-1 rounded-md"
+                  type="text"
+                />
+              </div>
+            </div>
+            <!---------------------------------- first row --------------->
+            <div class="w-[50%] h-full">
+              <!-- name player -->
+              <div class="flex gap-10 justify-center items-center w-full mt-6">
+                <label class="jalayerMd text-2xl text-[#ffcd79]" for="name"
+                  >اسم بازیکن</label
+                >
+                <input placeholder="اسم"
+                  id="name"
+                  class="w-[50%] bg-[#101111]  border border-[#201f20] py-1 rounded-md placeholder:text-[#ffffff41] px-4"
+                  type="text"
+                />
+              </div>
+
+              <!-- height player -->
+              <div class="flex gap-10 justify-center items-center w-full mt-6">
+                <label class="jalayerMd text-2xl text-[#ffcd79]" for="height"
+                  >قد بازیکن</label
+                >
+                <input placeholder="قد بازیکن با سانتی متر(cm)"
+                  id="height"
+                  class="placeholder:text-[#ffffff41] px-4 w-[50%] bg-[#101111] border border-[#201f20] py-1 rounded-md"
+                  type="text"
+                />
+              </div>
+
+              <!-- weight player -->
+              <div class="flex gap-10 justify-center items-center w-full mt-6">
+                <label class="jalayerMd text-2xl text-[#ffcd79]" for="weight"
+                  >وزن بازیکن</label
+                >
+                <input placeholder="وزن به کیلوگرم (Kg)"
+                  id="weight"
+                  class="placeholder:text-[#ffffff41] px-4 w-[50%] bg-[#101111] border border-[#201f20] py-1 rounded-md"
+                  type="text"
+                />
+              </div>
+
+              <div class="flex relative justify-center">
+                <h5
+                  id="error"
+                  class="text-red-600 text-2xl top-6 px-6 rounded-md bg-white absolute justify-center text-center hidden  jalayerMd "
+                >
+                  یکی از ورودی ها خالی هست
+                </h5>
+                <h5
+                  id="errorName"
+                  class="text-red-600 text-2xl top-6 px-6 rounded-md bg-white absolute justify-center text-center hidden  jalayerMd "
+                >
+                  داخل اسم بازیکن عدد نمیتونی وارد کنی
+                </h5>
+                <h5
+                  id="errorHeight"
+                  class="text-red-600 text-2xl top-6 px-6 rounded-md bg-white absolute justify-center text-center hidden  jalayerMd "
+                >
+                  داخل قد نمیتونی حروف بنویسی
+                </h5>
+
+                <h5
+                  id="errorWeight"
+                  class="text-red-600 text-2xl top-6 px-6 rounded-md bg-white absolute justify-center text-center hidden  jalayerMd "
+                >
+                  داخل وزن نمیتونی حروف بنویسی
+                </h5>
+
+
+                <h5
+                  id="errorPercent"
+                  class="text-red-600 text-2xl top-6 px-6 rounded-md bg-white absolute justify-center text-center hidden  jalayerMd "
+                >
+                  داخل درصد ها نمیتونی حروف بنویسی
+                </h5>
+              </div>
+
+              <div class="w-full flex justify-center mt-18">
+                <button
+                  class="px-7 py-2 bg-[#e77612] jalayerMd text-lg rounded-md hover:bg-[#df8638] duration-500 cursor-pointer"
+                  id="btn"
+                >
+                  آنالیز بازیکن
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!------------------------------------- inputs end ------------------->
+
+        <!---------------------- player analisys ---------------------->
+        <div
+          class="flex flex-wrap gap-16 w-full px-10 mt-28"
+          id="analysRes"
+        ></div>
+      </div>
+    </main>
+  </body>
+  <script src="src/js/index.js"></script>
+</html>

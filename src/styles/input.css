@@ -1,0 +1,12 @@
+@import "tailwindcss";
+/* npx @tailwindcss/cli -i ./src/styles/input.css -o ./src/styles/output.css --watch */
+
+@font-face {
+  font-family: jalayerMd;
+  src: url(../fonts/TKT-jalayer-Family/TKT-jalayer\ Medium.otf);
+}
+@layer utilities {
+  .jalayerMd {
+    font-family: jalayerMd;
+  }
+}
