@@ -33,12 +33,12 @@ if (localStorageStatus) {
 // default with localstorage
 db.map((item) => {
   _analysResDiv.innerHTML += `<div
-            class="w-[20%] bg-[#101111] hover:scale-110 duration-500 border border-[#201f20] py-5 rounded-2xl"
+            class="w-[40%] md:w-[20%] bg-[#101111] hover:scale-110 duration-500 border border-[#201f20] py-5 rounded-2xl"
           >
             <!-- مشخصات -->
             <div class="jalayerMd flex justify-between px-5 py-3">
               <div>
-                <span class="text-4xl">${item[0]}</span>
+                <span class="text-2xl">${item[0]}</span>
                 <h6>قد : ${item[1]}</h6>
                 <h5>وزن : ${item[2]}</h5>
               </div>
@@ -251,7 +251,7 @@ _btnSubmit.addEventListener("click", () => {
 
     let makeAnalys = `
                   <div
-            class="w-[20%] hover:scale-110 duration-500  bg-[#101111] border border-[#201f20] py-5 rounded-2xl"
+            class="w-[45%] md:w-[20%] hover:scale-110 duration-500  bg-[#101111] border border-[#201f20] py-5 rounded-2xl"
           >
             <!-- مشخصات -->
             <div class="jalayerMd flex justify-between px-5 py-3">

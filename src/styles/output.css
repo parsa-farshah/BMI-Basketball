@@ -227,6 +227,9 @@
   .mt-28 {
     margin-top: calc(var(--spacing) * 28);
   }
+  .mt-40 {
+    margin-top: calc(var(--spacing) * 40);
+  }
   .flex {
     display: flex;
   }
@@ -248,6 +251,9 @@
   .h-\[300px\] {
     height: 300px;
   }
+  .h-fit {
+    height: fit-content;
+  }
   .h-full {
     height: 100%;
   }
@@ -262,6 +268,9 @@
   }
   .w-\[40px\] {
     width: 40px;
+  }
+  .w-\[45\%\] {
+    width: 45%;
   }
   .w-\[50\%\] {
     width: 50%;
@@ -505,6 +514,16 @@
   .md\:mt-10 {
     @media (width >= 48rem) {
       margin-top: calc(var(--spacing) * 10);
+    }
+  }
+  .md\:mt-28 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 28);
+    }
+  }
+  .md\:w-\[20\%\] {
+    @media (width >= 48rem) {
+      width: 20%;
     }
   }
   .md\:w-\[50\%\] {
