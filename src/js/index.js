@@ -1,8 +1,5 @@
 let db = [];
 
-// set lostorage
-localStorage;
-
 let _nameInp = document.querySelector("#name");
 let _heightInp = document.querySelector("#height");
 let _btnSubmit = document.querySelector("#btn");
@@ -22,6 +19,119 @@ let _defenseInp = document.querySelector("#defense");
 let _analysResDiv = document.querySelector("#analysRes");
 let flag = 10;
 let _nameVal;
+
+// set lostorage
+let localStorageStatus = localStorage.getItem("dataBase");
+if (localStorageStatus) {
+  db = [...JSON.parse(localStorageStatus)];
+  window.db = db;
+} else {
+  db = [];
+  window.db = db;
+}
+
+// default with localstorage
+db.map((item) => {
+  _analysResDiv.innerHTML += `<div
+            class="w-[20%] bg-[#101111] hover:scale-110 duration-500 border border-[#201f20] py-5 rounded-2xl"
+          >
+            <!-- مشخصات -->
+            <div class="jalayerMd flex justify-between px-5 py-3">
+              <div>
+                <span class="text-4xl">${item[0]}</span>
+                <h6>قد : ${item[1]}</h6>
+                <h5>وزن : ${item[2]}</h5>
+              </div>
+              <img
+                class="w-[70px] h-[70px] object-cover"
+                src="src/images/basketballMan.png"
+                alt=""
+              />
+            </div>
+            <!-- bmi -->
+            <div class="flex items-center justify-between px-5">
+              <div
+                class="w-[50%] h-[10px] bg-[#1d1c1d] rounded-2xl relative overflow-hidden"
+              >
+                <div
+                  class="absolute top-0 left-0 bg-[#e67616]  h-full"
+                  style="width: ${item[8] * 2}%"
+                ></div>
+              </div>
+              <span dir="ltr" class="w-[50%]">BMI ${item[8]}</span>
+            </div>
+            <!-- body type -->
+            <h4 class="px-5 mt-2">${item[9]}</h4>
+            <!-- post player -->
+            <div class="mt-4 px-5">
+              <h4 dir="ltr" class="text-[#ffcd79] text-sm">${item[10]}</h4>
+              <!-- 3point -->
+              <div class="flex items-center justify-between gap-2 mt-3">
+                <span class="w-[50%] text-[12px]">3 امتیازی</span>
+                <div
+                  class="w-[50%] bg-[#1d1c1d] h-[10px] rounded-2xl relative overflow-hidden"
+                >
+                  <div style="width: ${item[3]}%"
+                    class="absolute top-0 left-0 bg-[#e67616]  h-full"
+                  ></div>
+                </div>
+              </div>
+              <!-- drible -->
+              <div class="flex items-center justify-between gap-2 mt-3">
+                <span class="w-[50%] text-[12px]">دریبل</span>
+                <div
+                  class="w-[50%] bg-[#1d1c1d] h-[10px] rounded-2xl relative overflow-hidden"
+                >
+                  <div style="width: ${item[4]}%"
+                    class="absolute top-0 left-0 bg-[#e67616] w-[50%] h-full"
+                  ></div>
+                </div>
+              </div>
+              <!-- layup -->
+              <div class="flex items-center justify-between gap-2 mt-3">
+                <span class="w-[50%] text-[12px]">لی آپ</span>
+                <div
+                  class="w-[50%] bg-[#1d1c1d] h-[10px] rounded-2xl relative overflow-hidden"
+                >
+                  <div style="width: ${item[5]}%"
+                    class="absolute top-0 left-0 bg-[#e67616] w-[50%] h-full"
+                  ></div>
+                </div>
+              </div>
+              <!-- free throw -->
+              <div class="flex items-center justify-between gap-2 mt-3">
+                <span class="w-[50%] text-[12px]">پنالتی</span>
+                <div
+                  class="w-[50%] bg-[#1d1c1d] h-[10px] rounded-2xl relative overflow-hidden"
+                >
+                  <div style="width: ${item[6]}%"
+                    class="absolute top-0 left-0 bg-[#e67616] w-[50%] h-full"
+                  ></div>
+                </div>
+              </div>
+              <!-- defense -->
+              <div class="flex items-center justify-between gap-2 mt-3">
+                <span class="w-[50%] text-[12px]">ذفاع</span>
+                <div
+                  class="w-[50%] bg-[#1d1c1d] h-[10px] rounded-2xl relative overflow-hidden"
+                >
+                  <div style="width: ${item[7]}%"
+                    class="absolute top-0 left-0 bg-[#e67616] w-[50%] h-full"
+                  ></div>
+                </div>
+              </div>
+              <!-- end 3point -->
+            </div>
+          </div>`;
+});
+
+console.log(localStorageStatus);
+console.log(db);
+
+// console.log(localStorageStatus[2]);
+
+
+
 _btnSubmit.addEventListener("click", () => {
   flag = 10;
 
@@ -123,7 +233,7 @@ _btnSubmit.addEventListener("click", () => {
     } else if (_defenseVal >= 70 && _heightVal >= 200) {
       playerRole = "سنتر (Center)";
     } else {
-      playerRole = "بازیکن آزاد 😅";
+      playerRole = " به درد بسکتبال نمیخورید 😅";
     }
 
     if (_bmi < 18.5) {
@@ -141,12 +251,12 @@ _btnSubmit.addEventListener("click", () => {
 
     let makeAnalys = `
                   <div
-            class="w-[20%] bg-[#101111] border border-[#201f20] py-5 rounded-2xl"
+            class="w-[20%] hover:scale-110 duration-500  bg-[#101111] border border-[#201f20] py-5 rounded-2xl"
           >
             <!-- مشخصات -->
             <div class="jalayerMd flex justify-between px-5 py-3">
               <div>
-                <span class="text-xl">${_nameVal}</span>
+                <span class="text-2xl">${_nameVal}</span>
                 <h6>قد : ${_heightVal}</h6>
                 <h5>وزن : ${_weightVal}</h5>
               </div>
@@ -188,7 +298,7 @@ _btnSubmit.addEventListener("click", () => {
               <div class="flex items-center justify-between gap-2 mt-3">
                 <span class="w-[50%] text-[12px]">دریبل</span>
                 <div
-                  class="w-[50%] border bg-[#1d1c1d] h-[10px] rounded-2xl relative overflow-hidden"
+                  class="w-[50%] bg-[#1d1c1d] h-[10px] rounded-2xl relative overflow-hidden"
                 >
                   <div style="width: ${_dribleVal}%"
                     class="absolute top-0 left-0 bg-[#e67616] w-[50%] h-full"
@@ -199,7 +309,7 @@ _btnSubmit.addEventListener("click", () => {
               <div class="flex items-center justify-between gap-2 mt-3">
                 <span class="w-[50%] text-[12px]">لی آپ</span>
                 <div
-                  class="w-[50%] bg-[#1d1c1d] border h-[10px] rounded-2xl relative overflow-hidden"
+                  class="w-[50%] bg-[#1d1c1d] h-[10px] rounded-2xl relative overflow-hidden"
                 >
                   <div style="width: ${_layupVal}%"
                     class="absolute top-0 left-0 bg-[#e67616] w-[50%] h-full"
@@ -210,7 +320,7 @@ _btnSubmit.addEventListener("click", () => {
               <div class="flex items-center justify-between gap-2 mt-3">
                 <span class="w-[50%] text-[12px]">پنالتی</span>
                 <div
-                  class="w-[50%] border bg-[#1d1c1d] h-[10px] rounded-2xl relative overflow-hidden"
+                  class="w-[50%] bg-[#1d1c1d] h-[10px] rounded-2xl relative overflow-hidden"
                 >
                   <div style="width: ${_freethrowVal}%"
                     class="absolute top-0 left-0 bg-[#e67616] w-[50%] h-full"
@@ -221,7 +331,7 @@ _btnSubmit.addEventListener("click", () => {
               <div class="flex items-center justify-between gap-2 mt-3">
                 <span class="w-[50%] text-[12px]">ذفاع</span>
                 <div
-                  class="w-[50%] border bg-[#1d1c1d] h-[10px] rounded-2xl relative overflow-hidden"
+                  class="w-[50%] bg-[#1d1c1d] h-[10px] rounded-2xl relative overflow-hidden"
                 >
                   <div style="width: ${_defenseVal}%"
                     class="absolute top-0 left-0 bg-[#e67616] w-[50%] h-full"
@@ -247,9 +357,14 @@ _btnSubmit.addEventListener("click", () => {
       _layupVal,
       _freethrowVal,
       _defenseVal,
+      _bmi,
+      bodyType,
+      playerRole,
     ];
 
     db.push(dataPlayer);
+
+    localStorage.setItem("dataBase", JSON.stringify(db));
 
     _nameInp.value = "";
     _heightInp.value = "";

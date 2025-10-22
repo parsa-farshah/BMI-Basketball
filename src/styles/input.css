@@ -5,8 +5,16 @@
   font-family: jalayerMd;
   src: url(../fonts/TKT-jalayer-Family/TKT-jalayer\ Medium.otf);
 }
+
+@font-face {
+  font-family: asrejadid;
+  src: url(../fonts/Tano\ Circle-Dots.ttf);
+}
 @layer utilities {
   .jalayerMd {
     font-family: jalayerMd;
+  }
+  .asrejadid {
+    font-family: asrejadid;
   }
 }
