@@ -20,6 +20,9 @@ let _analysResDiv = document.querySelector("#analysRes");
 let flag = 10;
 let _nameVal;
 
+// click reset
+let btnReset = document.querySelector("#btnReset");
+
 // set lostorage
 let localStorageStatus = localStorage.getItem("dataBase");
 if (localStorageStatus) {
@@ -125,12 +128,7 @@ db.map((item) => {
           </div>`;
 });
 
-console.log(localStorageStatus);
-console.log(db);
-
-// console.log(localStorageStatus[2]);
-
-
+///////////////////////////////////////////////////////////////// click
 
 _btnSubmit.addEventListener("click", () => {
   flag = 10;
@@ -143,10 +141,6 @@ _btnSubmit.addEventListener("click", () => {
   _layupVal = _layupInp.value;
   _freethrowVal = _freethrowInp.value;
   _defenseVal = _defenseInp.value;
-
-  console.log(_nameVal.search(/[0-9]/));
-
-  console.log(_nameVal);
 
   // داخل سام نتونه عدد بنویسه
 
@@ -250,7 +244,7 @@ _btnSubmit.addEventListener("click", () => {
     }
 
     let makeAnalys = `
-                  <div
+                  <div id="analysCard"
             class="w-[45%] md:w-[20%] hover:scale-110 duration-500  bg-[#101111] border border-[#201f20] py-5 rounded-2xl"
           >
             <!-- مشخصات -->
@@ -343,9 +337,6 @@ _btnSubmit.addEventListener("click", () => {
           </div>
     `;
 
-    console.log(bodyType);
-    console.log(_bmi);
-
     _analysResDiv.innerHTML += makeAnalys;
 
     let dataPlayer = [
@@ -375,4 +366,15 @@ _btnSubmit.addEventListener("click", () => {
     _freethrowInp.value = "";
     _defenseInp.value = "";
   }
+
+  let analysCard = document.querySelector("#analysCard");
+  analysCard.classList.add("block");
+});
+
+btnReset.addEventListener("click", () => {
+  let analysCard = document.querySelector("#analysCard");
+  db = [];
+  localStorage.setItem("dataBase", JSON.stringify(db));
+  analysCard.classList.add("hidden");
+  console.log(db);
 });
