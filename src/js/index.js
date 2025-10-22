@@ -35,7 +35,7 @@ if (localStorageStatus) {
 
 // default with localstorage
 db.map((item) => {
-  _analysResDiv.innerHTML += `<div
+  _analysResDiv.innerHTML += `<div id="analysCard"
             class="w-[48%] md:w-[20%] bg-[#101111] hover:scale-110 duration-500 border border-[#201f20] py-5 rounded-2xl"
           >
             <!-- مشخصات -->
