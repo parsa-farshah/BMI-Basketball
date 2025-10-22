@@ -11,13 +11,13 @@
       type="image/x-icon"
     />
   </head>
-  <body class="bg-black text-white">
+  <body class="bg-black text-white jalayerMd">
     <main class="w-full">
       <div>
         <!----------------------- title ------------------------>
         <section class="flex justify-center items-center mt-7 gap-4">
-          <h4 class="jalayerMd text-3xl sm:text-4xl">
-            تحلیلگر BMI و پست بسکتبال
+          <h4 class="jalayerMd text-3xl sm:text-4xl asrejadid">
+            تحلیلگر <span class="font-black jalayerMd">BMI</span> و پست بسکتبال
           </h4>
           <img
             class="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px]"
@@ -44,7 +44,7 @@
             id="form"
           >
             <!----------------------- second row -------------------------->
-            <div class="w-full md:w-[50%] h-full px-8">
+            <div class="w-full md:w-[50%] h-full px-0">
               <!-- 3point player -->
               <div class="flex gap-10 justify-center items-center w-full mt-6">
                 <label
@@ -211,19 +211,23 @@
 
         <!---------------------- player analisys ---------------------->
         <div
-          class="flex w-full h-fit flex-wrap gap-16 mt-20 px-10 md:mt-28"
+          class="flex w-full h-fit bg-amber-400 flex-wrap justify-between md:justify-start md:gap-16 mt-20 px-[2%] md:mt-28 pb-20"
           id="analysRes"
         >
-          <h4 class="w-full text-center mx-auto asrejadid text-3xl md:text-6xl">
+          <h4
+            class="w-full text-center text-black mx-auto mt-7 asrejadid text-3xl md:text-6xl mb-7"
+          >
             بازیکن های آنالیز شده
           </h4>
         </div>
-        <button
-          class="px-7 py-2 bg-[#e77612] w-[40%] jalayerMd rounded-md hover:bg-[#df8638] duration-500 cursor-pointer flex justify-center items-center mx-auto my-10 text-xl md:text-4xl"
-          id="btnReset"
-        >
-          ریست شدن
-        </button>
+        <div class="bg-amber-400 w-full py-10">
+          <button
+            class="px-7 py-2 bg-[#e77612] w-[40%] jalayerMd rounded-md hover:bg-[#df8638] duration-500 cursor-pointer flex justify-center items-center mx-auto  text-xl md:text-4xl"
+            id="btnReset"
+          >
+            ریست شدن
+          </button>
+        </div>
       </div>
     </main>
   </body>
