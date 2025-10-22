@@ -231,6 +231,9 @@
   .my-10 {
     margin-block: calc(var(--spacing) * 10);
   }
+  .my-20 {
+    margin-block: calc(var(--spacing) * 20);
+  }
   .mt-1 {
     margin-top: calc(var(--spacing) * 1);
   }
@@ -477,6 +480,9 @@
   .bg-\[\#1d1c1d\] {
     background-color: #1d1c1d;
   }
+  .bg-\[\#0000003f\] {
+    background-color: #0000003f;
+  }
   .bg-\[\#5142fc\] {
     background-color: #5142fc;
   }
@@ -579,6 +585,12 @@
   }
   .py-16 {
     padding-block: calc(var(--spacing) * 16);
+  }
+  .py-20 {
+    padding-block: calc(var(--spacing) * 20);
+  }
+  .py-28 {
+    padding-block: calc(var(--spacing) * 28);
   }
   .pt-28 {
     padding-top: calc(var(--spacing) * 28);
