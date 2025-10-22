@@ -3,8 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>bmi</title>
+    <title>تحلیلگر BMI</title>
     <link rel="stylesheet" href="src/styles/output.css" />
+    <link
+      rel="shortcut icon"
+      href="src/icons/favIcon.png"
+      type="image/x-icon"
+    />
   </head>
   <body class="bg-black text-white">
     <main class="w-full">
@@ -23,7 +28,7 @@
         <!-- about -->
         <section class="w-full mt-6 asrejadid">
           <h4
-            class="text-center text-4xl w-[90%] md:w-[60%] mx-auto text-[#eeeeeef5] asrejadid"
+            class="text-center text-xl md:text-4xl w-[90%] md:w-[60%] mx-auto text-[#eeeeeef5] asrejadid"
           >
             با این آنالیزور میتونید تایپ بدنی که دارید رو بفهمید و تشخیص بدید
             برای بسکتبال برای چه پستی مناسب هستید بازی کنید با توانایی هایی که
@@ -50,7 +55,7 @@
                 <input
                   placeholder="100"
                   id="shot"
-                  class="placeholder:text-[#ffffff41] px-2 w-[10%] bg-[#101111] border border-[#201f20] py-1 rounded-md"
+                  class="placeholder:text-[#ffffff41] pr-1 md:px-2 w-[10%] bg-[#101111] border border-[#201f20] py-1 rounded-md"
                   type="text"
                 />
               </div>
@@ -65,7 +70,7 @@
                 <input
                   placeholder="50"
                   id="drible"
-                  class="placeholder:text-[#ffffff41] px-2 w-[10%] bg-[#101111] border border-[#201f20] py-1 rounded-md"
+                  class="placeholder:text-[#ffffff41] pr-2 md:px-2 w-[10%] bg-[#101111] border border-[#201f20] py-1 rounded-md"
                   type="text"
                 />
               </div>
@@ -80,7 +85,7 @@
                 <input
                   placeholder="20"
                   id="layup"
-                  class="placeholder:text-[#ffffff41] px-2 w-[10%] bg-[#101111] border border-[#201f20] py-1 rounded-md"
+                  class="placeholder:text-[#ffffff41] pr-2 md:px-2 w-[10%] bg-[#101111] border border-[#201f20] py-1 rounded-md"
                   type="text"
                 />
               </div>
@@ -95,7 +100,7 @@
                 <input
                   placeholder="10"
                   id="freethrow"
-                  class="placeholder:text-[#ffffff41] px-2 w-[10%] bg-[#101111] border border-[#201f20] py-1 rounded-md"
+                  class="placeholder:text-[#ffffff41] pr-2 md:px-2 w-[10%] bg-[#101111] border border-[#201f20] py-1 rounded-md"
                   type="text"
                 />
               </div>
@@ -110,7 +115,7 @@
                 <input
                   placeholder="90"
                   id="defense"
-                  class="placeholder:text-[#ffffff41] px-2 w-[10%] bg-[#101111] border border-[#201f20] py-1 rounded-md"
+                  class="placeholder:text-[#ffffff41] pr-2 md:px-2 w-[10%] bg-[#101111] border border-[#201f20] py-1 rounded-md"
                   type="text"
                 />
               </div>
@@ -191,9 +196,9 @@
                 </h5>
               </div>
 
-              <div class="w-full  mt-18 flex justify-center">
+              <div class="w-full mt-18 flex justify-center">
                 <button
-                  class="px-7 py-2 bg-[#e77612] w-[68%] jalayerMd  text-lg rounded-md hover:bg-[#df8638] duration-500 cursor-pointer"
+                  class="px-7 py-2 bg-[#e77612] w-[68%] jalayerMd text-lg rounded-md hover:bg-[#df8638] duration-500 cursor-pointer"
                   id="btn"
                 >
                   آنالیز بازیکن
@@ -209,12 +214,12 @@
           class="flex w-full h-fit flex-wrap gap-16 mt-20 px-10 md:mt-28"
           id="analysRes"
         >
-          <h4 class="w-full text-center mx-auto asrejadid text-6xl">
+          <h4 class="w-full text-center mx-auto asrejadid text-3xl md:text-6xl">
             بازیکن های آنالیز شده
           </h4>
         </div>
         <button
-          class="px-7 py-2 bg-[#e77612] w-[40%] jalayerMd rounded-md hover:bg-[#df8638] duration-500 cursor-pointer flex justify-center items-center mx-auto my-10 text-4xl"
+          class="px-7 py-2 bg-[#e77612] w-[40%] jalayerMd rounded-md hover:bg-[#df8638] duration-500 cursor-pointer flex justify-center items-center mx-auto my-10 text-xl md:text-4xl"
           id="btnReset"
         >
           ریست شدن
