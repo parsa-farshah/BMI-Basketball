@@ -75,7 +75,7 @@ This project was developed under the mentorship of
 <img src="src/images/cover.png" alt="BMI Basketball Analyzer Overview" width="100%">
 
 💻 Desktop View  
-<img src="src/images/1.png" alt="Desktop View" width="48%"> <img src="src/images/1.png" alt="Desktop View 2" width="48%">
+<img src="src/images/1.png" alt="Desktop View" width="48%">
 
 📱 Tablet View  
 <img src="src/images/2.png" alt="Mobile View" width="45%">
