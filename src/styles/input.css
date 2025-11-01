@@ -17,4 +17,10 @@
   .asrejadid {
     font-family: asrejadid;
   }
+  .wordSpacing {
+    word-spacing: 12px;
+  }
+  .wordSpacingSm {
+    word-spacing: 6px;
+  }
 }
